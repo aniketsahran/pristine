@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pristine</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    {{#if (message)}}
+                    <h4>{{message}}</h4>
+                    {{/if}}
+                    <form action="/auth/login" method="POST">
+                        <div class="group">
+                            <label for="roll_no" class="label">Roll Number</label>
+                            <input id="roll_no" type="text" class="input"  name="roll_no">
+                        </div>
+                        <div class="group">
+                            <label for="password" class="label">Password</label>
+                            <input id="password" type="password" class="input" data-type="password" name="password">
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In">
+                        </div>
+                    </form>
+                </div>
+                <div class="sign-up-htm">
+                    <form action="/auth/register" method="POST">
+                        <div class="group">
+                            <label for="name" class="label">Name</label>
+                            <input id="name" type="text" class="input" name="name">
+                        </div>
+                        <div class="group">
+                            <label for="roll_no" class="label">Roll Number</label>
+                            <input id="roll_no" type="text" class="input" name="roll_no" >
+                        </div>
+                        <div class="group">
+                            <label for="hostel" class="label">Hostel</label>
+                            <input id="hostel" type="text" class="input" name="hostel">
+                        </div>
+                        <div class="group">
+                            <label for="room_no" class="label">Room Number</label>
+                            <input id="room_no" type="text" class="input" name="room_no">
+                        </div>
+                        <div class="group">
+                            <label for="email" class="label">Email</label>
+                            <input id="email" type="mail" class="input" name="email">
+                        </div>
+                        <div class="group">
+                            <label for="password" class="label">Password</label>
+                            <input id="password" type="password" data-type="password" class="input" name="password">
+                        </div>
+                        <div class="group">
+                            <label for="passwordConfirm" class="label">Confirm Password</label>
+                            <input id="passwordConfirm" type="password" data-type="password" class="input" name="passwordConfirm">
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
