@@ -58,6 +58,6 @@ app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'));
 app.use('/dbase', require('./routes/dbase'));
 
-app.listen(5000, function(){
+app.listen(5050, function(){
     console.log("Server started on port 5000");
 });
